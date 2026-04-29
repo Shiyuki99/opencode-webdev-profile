@@ -1,0 +1,34 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "plugin": ["./plugins/profile-plugin"],
+  "mcp": {
+    "supabase": {
+      "type": "remote",
+      "url": "https://mcp.supabase.com/mcp?project_ref=wrmosootderjepolnjxe",
+      "enabled": true
+    },
+    "github": {
+      "type": "local",
+      "command": ["npx", "-y", "@modelcontextprotocol/server-github"],
+      "enabled": true
+    },
+    "sequential-thinking": {
+      "type": "local",
+      "command": ["npx", "-y", "@modelcontextprotocol/server-sequential-thinking"],
+      "enabled": true
+    },
+    "21st-dev-magic": {
+      "type": "local",
+      "command": ["npx", "-y", "@21st-dev/magic@latest"],
+      "env": {
+        "API_KEY": "fa41e3c25e0a5f6b73ebd2e28d23212724358688ad0b06a83da115863293e184"
+      },
+      "enabled": true
+    }
+  },
+  "skills": {
+    "permissions": {
+      "*": "allow"
+    }
+  }
+}
