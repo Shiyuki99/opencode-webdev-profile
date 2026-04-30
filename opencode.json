@@ -24,6 +24,11 @@
         "API_KEY": "fa41e3c25e0a5f6b73ebd2e28d23212724358688ad0b06a83da115863293e184"
       },
       "enabled": true
+    },
+    "ctf-mcp": {
+      "type": "local",
+      "command": ["/tmp/ctf-venv/bin/ctf-mcp"],
+      "enabled": true
     }
   },
   "skills": {

@@ -37,6 +37,43 @@ const profiles: Profiles = {
       "writing-plans",
     ],
   },
+  ctf: {
+    mcp: {
+      "ctf-mcp": { enabled: true },
+      "sequential-thinking": { enabled: true },
+      github: { enabled: true },
+    },
+    enabled_skills: [
+      "writing-plans",
+      "executing-plans",
+      "brainstorming",
+      "architecture-review",
+      "bug-hunter",
+      "systematic-debugging",
+      "debugging-strategies",
+      "verification-before-completion",
+      "test-driven-development",
+      "using-superpowers",
+      "dispatching-parallel-agents",
+      "subagent-driven-development",
+      "prompt-optimizer",
+      "context-manager",
+      "context7-auto-research",
+      "writing-skills",
+      "finishing-a-development-branch",
+      "using-git-worktrees",
+    ],
+    disabled_skills: [
+      "ui-styling",
+      "ui-ux-pro-max",
+      "design-system",
+      "slides",
+      "banner-design",
+      "brand",
+      "design",
+      "ui-designer",
+    ],
+  },
 };
 
 export const ProfilePlugin: Plugin = async () => {

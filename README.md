@@ -1,63 +1,81 @@
-# OpenCode WebDev Profile
+# OpenCode Profiles
 
-A complete OpenCode profile for web development with MCP servers, skills, and profile management.
+Complete OpenCode profiles for **web development** and **CTF (Capture The Flag)** with MCP servers, profile plugin, and curated skills.
 
-## Installation
+## Quick Install
 
 ```bash
-# Clone this repository
 git clone https://github.com/Shiyuki99/opencode-webdev-profile.git
 cd opencode-webdev-profile
-
-# Run installation script
 chmod +x install.sh
 ./install.sh
 ```
 
-## What's Included
+## Profiles
 
-### MCP Servers
-- **supabase** - Database & Auth (remote)
-- **github** - GitHub integration (local)
-- **sequential-thinking** - Advanced reasoning (local)
-- **21st-dev-magic** - AI UI component generation (local)
+### WebDev (default)
+Web development profile with database, UI, and API skills.
+- **MCP**: supabase, github, 21st-dev-magic, sequential-thinking
+- **Skills**: api-patterns, architecture-review, ui-styling, supabase, writing-plans, brainstorm + more
 
-### Profile Plugin
-The profile plugin allows switching between different configurations using the `OPENCODE_PROFILE` environment variable.
-
-Current profiles:
-- `webdev` (default) - Web development focused
+### CTF
+Capture The Flag / cybersecurity profile with 166 built-in tools.
+- **MCP**: ctf-mcp, sequential-thinking, github
+- **Skills**: CTF skills from [ljagiello/ctf-skills](https://github.com/ljagiello/ctf-skills) + debugging, planning, and analysis skills
+- **166 tools** across crypto (53), web (46), pwn (27), reverse, forensics, stego
 
 ## Usage
 
 ```bash
-# Start opencode with webdev profile (default)
+# Web development
 opencode
 
-# Or explicitly set profile
-OPENCODE_PROFILE=webdev opencode
+# CTF mode
+OPENCODE_PROFILE=ctf opencode
 ```
 
-## Adding MCP Servers
+## MCP Servers
 
-Edit `opencode.json` to add more MCP servers:
+| Server | Type | Description |
+|--------|------|-------------|
+| supabase | remote | Database & Auth |
+| github | local | GitHub API |
+| sequential-thinking | local | Advanced reasoning |
+| 21st-dev-magic | local | AI UI components |
+| ctf-mcp | local | 166 CTF tools |
 
-```json
-{
-  "mcp": {
-    "your-server": {
-      "type": "local",
-      "command": ["npx", "-y", "your-mcp-package"],
-      "enabled": true
-    }
-  }
-}
+## Skills Directory Structure
+
+```
+~/.config/opencode/
+  opencode.json        # Main config
+  plugins/
+    profile-plugin.ts  # Profile switching
+    package.json       # Dependencies
+
+~/Dev/ctf/
+  .agents/skills/
+    planning/          # Workflow skills from workspace
+    debugging/         # Debug analysis skills
+    ctf/               # Full CTF skills from repo
 ```
 
-## Skills
+## Install System Tools (CTF)
 
-Skills are automatically loaded from your workspace. The profile includes permissions for webdev-related skills.
+```bash
+# Arch Linux
+sudo pacman -S wireshark-qt radare2 hashcat john nmap foremost steghide audacity dirb ffuf gobuster perl-image-exiftool ltrace strace
 
-## License
+# Python tools
+pip install ctf-mcp ptai
 
-MIT
+# Ruby tools
+gem install zsteg
+```
+
+## Credits
+
+- CTF skills: [ljagiello/ctf-skills](https://github.com/ljagiello/ctf-skills)
+- CTF-MCP: [Coff0xc/CTF-MCP](https://github.com/Coff0xc/CTF-MCP)
+- Medium: [@cryptax - Agent skills setup for Insomni'hack CTF](https://cryptax.medium.com/agent-skills-setup-for-insomnihack-ctf-c7c2b3c2e0f3)
+- Medium: [@harishhacker3010 - Cracking CTFs with AI Agents](https://medium.com/@harishhacker3010/cracking-ctfs-and-finding-zero-days-with-ai-agents-41a1083ba088)

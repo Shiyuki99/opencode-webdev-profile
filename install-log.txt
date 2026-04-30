@@ -1,0 +1,104 @@
+========================================================
+OpenCode Profile Installation Log
+Generated: $(date)
+========================================================
+
+PROFILES INSTALLED
+-----------------
+1. webdev (default) - Web development profile
+2. ctf - Capture The Flag / Cybersecurity profile
+
+MCP SERVERS CONFIGURED
+----------------------
+1. supabase (remote) - Database & Auth
+2. github (local) - GitHub API integration
+3. sequential-thinking (local) - Advanced reasoning
+4. 21st-dev-magic (local) - AI UI component generation
+5. ctf-mcp (local) - 166 CTF tools (crypto, web, pwn, reverse, forensics, stego)
+
+CTF-RELATED MCP SERVERS (from research)
+----------------------------------------
+Sources:
+- https://medium.com/@harishhacker3010/cracking-ctfs-and-finding-zero-days-with-ai-agents-41a1083ba088
+- https://cryptax.medium.com/agent-skills-setup-for-insomnihack-ctf-c7c2b3c2e0f3
+- https://github.com/ljagiello/ctf-skills
+
+Recommended free MCP servers for CTF:
+1. CTF-MCP (github.com/Coff0xc/CTF-MCP) - 166 tools, all local, free
+   - 53 crypto tools, 46 web tools, 27 pwn tools, reverse, forensics, stego
+   - Install: pip install ctf-mcp (or git clone + pip install -e .)
+2. kali-mcp-go (github.com/found-cake/kali-mcp-go) - tshark, nmap, sqlmap, hydra
+   - Free, no API keys needed
+3. MCP-Kali-Server (github.com/TriV3/MCP-Kali-Server) - nmap, gobuster, nikto
+4. pentest-ai (github.com/0xSteph/pentest-ai) - 150+ tools, 12 agents
+5. MCP-Ghidra5 (github.com/TheStingR/MCP-Ghidra5) - Ghidra RE with Ollama support
+6. PentestThinkingMCP (github.com/ibrahimsaleem/PentestThinkingMCP) - attack path planning
+
+SKILLS COPIED (from workspace)
+-------------------------------
+Planning & Workflow:
+- writing-plans, executing-plans, brainstorming
+- architecture-review, verification-before-completion
+- test-driven-development, using-superpowers
+- dispatching-parallel-agents, subagent-driven-development
+- prompt-optimizer, context-manager, context7-auto-research
+- writing-skills, finishing-a-development-branch
+- using-git-worktrees
+
+Debugging & Analysis:
+- bug-hunter, systematic-debugging, debugging-strategies
+
+SKILLS COPIED (from ctf-skills repo - github.com/ljagiello/ctf-skills)
+------------------------------------------------------------------------
+- ctf-crypto (RSA, ECC, lattice, PRNG, stream/block ciphers, ZKP)
+- ctf-reverse (anti-analysis, binary patterns, dynamic/static analysis, emulation)
+- ctf-pwn (ROP, heap exploitation, kernel, format string, sandbox escape)
+- ctf-web (SQLi, XSS, JWT, SSRF, deserialization, prototype pollution)
+- ctf-forensics (disk/memory, network forensics, stego, Windows forensics)
+- ctf-osint (geolocation, social media, web/DNS OSINT)
+- ctf-malware (C2 protocols, PE analysis, obfuscation)
+- ctf-misc (encodings, pyjails, privesc, DNS, RF/SDR)
+- ctf-writeup (writeup generation)
+- ctf-ai-ml (adversarial ML, LLM attacks)
+
+PYTHON CTF TOOLS INSTALLED (via venv at /tmp/ctf-venv/)
+---------------------------------------------------------
+- oletools - OLE file analysis (Microsoft Office)
+- binwalk - Firmware analysis
+- volatility3 - Memory forensics
+- ctf-mcp - 166 CTF challenge solving tools
+
+RUBY TOOLS INSTALLED
+--------------------
+- zsteg - PNG/BMP steganography detection
+
+SYSTEM TOOLS (already present)
+-------------------------------
+- gdb (GNU Debugger)
+- objdump
+- apktool
+- strings
+- file
+
+SYSTEM TOOLS (require sudo pacman -S)
+--------------------------------------
+- wireshark/tshark (packet analysis)
+- radare2 (reverse engineering framework)
+- hashcat (password cracking)
+- john (password cracking)
+- nmap (network scanning)
+- netcat (networking)
+- foremost (file carving)
+- steghide (steganography)
+- audacity (audio analysis)
+- exiftool (metadata extraction) - available via pacman as perl-image-exiftool
+- dirb/ffuf/gobuster (web directory fuzzing)
+- ltrace/strace (process tracing)
+
+NOTES
+-----
+- To switch profiles: OPENCODE_PROFILE=ctf opencode
+- CTF-MCP is installed at /tmp/ctf-venv/bin/ctf-mcp
+- Consider using a Docker container or VM for CTF work
+- The ctf-mcp server currently has a compatibility issue with Python 3.14
+  (needs an asyncio.run fix)
