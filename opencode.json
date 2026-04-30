@@ -27,7 +27,7 @@
     },
     "ctf-mcp": {
       "type": "local",
-      "command": ["/tmp/ctf-venv/bin/ctf-mcp"],
+      "command": ["CtfMcpPath"],
       "enabled": true
     }
   },
