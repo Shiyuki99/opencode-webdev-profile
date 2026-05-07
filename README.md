@@ -1,6 +1,6 @@
 # OpenCode Profiles
 
-Complete OpenCode profiles for **web development** and **CTF (Capture The Flag)** with MCP servers, profile switching plugin, and curated skills.
+Complete OpenCode profiles for **web development** with MCP servers, profile switching plugin, and curated skills.
 
 ## Quick Install
 
